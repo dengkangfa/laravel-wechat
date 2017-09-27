@@ -13,6 +13,7 @@ if ($contents['ref'] == 'refs/heads/master') {
     $res_log .= $contents['pusher']['name'] . ' 在' . data('Y-m-d H:i:s') . '向' . $contents['repository']['name'] . '项目的'
         . $contents['ref'] . '分支push了' . (isset($contents['total_commits_count']) ? $contents['total_commits_count'] : 1)  . '个commit:' . PHP_EOL;
     $res_log .= $res.PHP_EOL;
+    echo 1;
     $result = file_put_contents('git-webhook.txt', $res_log, FILE_APPEND);
     echo $result;
 }
