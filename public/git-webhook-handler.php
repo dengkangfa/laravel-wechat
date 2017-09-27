@@ -16,5 +16,6 @@ if ($contents['ref'] == 'refs/heads/master' && $contents['total_commits_count'] 
     $result = file_put_contents('git-webhook.txt', $res_log, FILE_APPEND);
     echo $result;
 } else {
+    echo 1;
     var_dump($contents);
 }
