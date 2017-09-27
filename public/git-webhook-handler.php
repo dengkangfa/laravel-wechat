@@ -12,7 +12,7 @@ if ($contents['ref'] == 'refs/heads/master') {
     $res = shell_exec("cd {$path} && git pull 2>&1");
         echo 2;
     $res_log = '------------------------'.PHP_EOL;
-    $rel_log .= $contents['pusher']['name'] . ' 在' . data('Y-m-d H:i:s') . '向' . $contents['repository']['name'] . '项目的'
+    $res_log .= $contents['pusher']['name'] . ' 在' . data('Y-m-d H:i:s') . '向' . $contents['repository']['name'] . '项目的'
         . $contents['ref'] . '分支push了' . (isset($contents['total_commits_count']) ? $contents['total_commits_count'] : 1)  . '个commit:' . PHP_EOL;
     $res_log .= $res.PHP_EOL;
         echo 3;
