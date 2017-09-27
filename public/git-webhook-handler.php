@@ -1,6 +1,7 @@
 <?php
 // git webhook 自动部署脚本
 // 项目存放的路径
+echo 1;
 $path = '/var/www/laravel-wechat';
 $requestBody = file_get_contents("php://input");
 if (empty($requestBody)) {
