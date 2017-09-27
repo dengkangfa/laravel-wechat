@@ -16,7 +16,7 @@ class WechatController extends Controller
 
         $wechat = app('wechat');
         $wechat->server->setMessageHandler(function($message) use ($wechat) {
-            return "欢迎关注 overtrue！";
+            return "测试自动部署";
         });
 
         return $wechat->server->serve();
