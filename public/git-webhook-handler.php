@@ -8,7 +8,7 @@ if (empty($requestBody)) {
 }
 $contents = json_decode($requestBody, true);
 if ($contents['ref'] == 'refs/heads/master') {
-    $res = shell_exec("cd {$path} && git pull 2>&1");
+    $res = shell_exec("cd {$path} && sudo git pull 2>&1");
     $res_log = '------------------------'.PHP_EOL;
     $res_log .= $contents['pusher']['name'] . ' 在' . date('Y-m-d H:i:s') . '向' . $contents['repository']['name'] . '项目的'
         . $contents['ref'] . '分支push了' . (isset($contents['total_commits_count']) ? $contents['total_commits_count'] : '1')  . '个commit:' . PHP_EOL;
