@@ -13,7 +13,6 @@ class WechatController extends Controller
      */
     public function serve()
     {
-
         $wechat = app('wechat');
         $wechat->server->setMessageHandler(function($message){
             return "测试自动部署";
